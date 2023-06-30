@@ -108,7 +108,7 @@ func (s *Manager) Init(ctx context.Context, state State, client BeaconClient, d 
 	}
 
 	fork := state.Fork()
-	headSlot := structs.Slot(syncStatus.HeadSlot)
+	headSlot := structs.Slot(9)
 	if !fork.IsAltair(headSlot) && !fork.IsBellatrix(headSlot) && !fork.IsCapella(headSlot) {
 		return ErrUnkownFork
 	}
