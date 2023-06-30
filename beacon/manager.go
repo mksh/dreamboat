@@ -89,10 +89,10 @@ func NewManager(l log.Logger, cfg Config) *Manager {
 func (s *Manager) Init(ctx context.Context, state State, client BeaconClient, d Datastore, vCache ValidatorCache) error {
 	logger := s.Log.WithField("method", "Init")
 
-	syncStatus, err := s.waitSynced(ctx, client)
-	if err != nil {
-		return err
-	}
+	// syncStatus, err := s.waitSynced(ctx, client)
+	// if err != nil {
+	//	return err
+	// }
 
 	genesis, err := client.Genesis()
 	if err != nil {
